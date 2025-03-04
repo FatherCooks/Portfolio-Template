@@ -10,7 +10,8 @@ A **modern and responsive** portfolio website built with **HTML and CSS**, desig
 - 🔹 Social media and contact links  
 
 ## 📸 Preview
-![Portfolio Website Screenshot](images/screenshot.png)  
+![image](https://github.com/user-attachments/assets/1ad35354-4d6f-4385-9ce2-1128d4ea2ca3)
+ *Plain Template
 
 ## 🎨 Technologies Used
 - **HTML5**
