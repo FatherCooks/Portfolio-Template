@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root { 
+  --text-color: #ededed;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+   background-image: url(/images/wallpaper.jpg); 
+   color: var(--text-color);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 100px auto;
+  }
+  
+  .left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+
+
+  .left-column .box {
+    height: auto;
+    width: 550px;
+    max-height: 250px;
+    min-height: 100px;
+  }
+
+  .edu-section span {
+    display: flex;
+    justify-content: space-between; /* Ensures space between h3 and small */
+    align-items: center; /* Aligns them vertically */
+    gap: 10px; /* Adds some space between them */
+    margin-top: 15px;
+}
+
+  .edu-section h3 {
+    flex: 1; /* Ensures h3 takes available space */
+    
+}
+
+  .edu-section small {
+    display: block;
+    text-align: right;
+    font-size: 10px;
+    white-space: nowrap; /* Prevents wrapping */
+  }
+
+  .edu-section p {
+    margin-top: 2px; /* Adds spacing below h3 and small */
+    font-size: 12px;
+}
+
+  .right-column {
+    overflow-y: auto;  /* Enables vertical scrolling when content overflows */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    position: relative;   /* Keeps it in place while scrolling */
+    top: 10px; 
+    max-height: 81vh;
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(255, 255, 255, 0.1); /* Thumb and track colors */
+  }
+
+  
+  
+  html, body {
+    height: 100vh;
+    overflow: hidden; /* Disables page scrolling */
+}
+
+/* ✅ Modern Scrollbar Styling */
+.right-column::-webkit-scrollbar {
+  width: 8px; /* Thin scrollbar */
+}
+
+.right-column::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Light transparent track */
+  border-radius: 10px;
+}
+
+.right-column::-webkit-scrollbar-thumb {
+  background: rgba(0, 171, 240, 0.7); /* Modern cyan blue color */
+  border-radius: 10px; /* Rounded edges */
+  transition: background 0.3s ease-in-out;
+}
+
+
+
+  .box {
+    background: rgba(0, 0, 0, 0.5);  /* semi-transparent background */
+    /*border: 1px solid rgba(255, 255, 255, 0.3);  /* subtle border */
+    
+    backdrop-filter: blur(8px);  /* blur behind the element */
+    -webkit-backdrop-filter: blur(5px);  /* Safari support */
+    border-radius: 7px;
+    padding: 5px 20px 100px 20px; /* top, right, bottom, left */
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  b {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 13px;
+    margin-top: 15px
+}
+
+.logo i {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+
+
+h2 {
+    font-size: 24px;
+    margin-top: 5px;
+    text-align: left;
+
+}
+h3 {
+  font-size: 15px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "languages frameworks interests"
+      ". others libraries";
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    row-gap: 20px; /* space between rows */
+    
+    font-size: 12px;
+  }
+  
+  .column {
+    padding: 0px;
+    text-align: left;
+  }
+  
+  /* Remove bullet points from the list */
+  .column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .column li {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  /* Assign grid areas to each column */
+  #languages {
+    grid-area: languages;
+    
+  }
+  
+  #frameworks {
+    grid-area: frameworks;
+  }
+  
+  #interests {
+    grid-area: interests;
+  }
+  
+  #others {
+    grid-area: others;
+    margin-top: -70px;
+  }
+  
+  #libraries {
+    grid-area: libraries;
+    margin-top: -70px;
+  }
+
+  
+  .skills-grid img {
+    width: 25px;
+    padding: 3px;
+  }
+
+a {
+  color: white;
+}
+
+small {
+  font-size: 12px;
+}
+
+.projects-grid img{
+  width: 24px;
+  margin: 8px 2px;
+}
+
+.right-column .box:first-child,
+.right-column .box:last-child {
+    min-height: 75px;  
+    max-height: 75px/* Ensures it doesn't stretch */;
+    overflow: hidden;
+    text-align: left;
+    padding: 10px;
+}
+
+.right-column .box:first-child:hover,
+.right-column .box:last-child:hover {
+    height: auto !important;
+    padding-bottom: initial !important;
+    overflow: hidden !important;
+    transition: none !important;
+    min-height: 75px; /* Default small height */
+    max-height: 75px; /* Ensures height doesn't shrink unexpectedly */
+}
+
+
+.right-column .box {
+  min-height: 125px; /* Default small height */
+  max-height: auto; 
+  overflow: hidden;
+  cursor: pointer;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out; /* Smooth transition */
+}
+
+#box-1 {
+  height: 75px !important; /* Fix height */
+  min-height: 75px !important;
+  max-height: 75px !important;
+  padding: 10px !important;
+  overflow: hidden !important;
+  display: flex;
+  align-items: center; /* Keeps text centered */
+  justify-content: space-between; /* Aligns text properly */
+}
+#box-1, #box-last {
+  display: flex;
+  justify-content: space-between; /* Ensures even spacing */
+  align-items: center; /* Aligns items vertically */
+  padding: 20px;
+}
+
+#box-1 span {
+  display: block; /* Ensures the span behaves like a full-width element */
+  text-align: right; /* Aligns text to the right */
+  font-size: 14px;
+}
+
+
+#box-1:hover {
+  height: 75px !important;
+  padding-bottom: 10px !important;
+  transition: none !important;
+}
+
+
+
+
+
+#box-last {
+  display: block;
+  text-align: center; /* Aligns text to the right */
+  font-size: 18px;
+}
+
+
+.right-column .box:hover {
+  min-height: auto; /* Expands to reveal content */
+  padding-bottom: 20px; /* Adds spacing */
+  overflow: visible; /* Ensures expanded content is visible */
+  max-height: auto;
+  
+}
+
+.description .hidden-text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+.box:hover .hidden-text {
+  opacity: 1;
+  visibility: visible;
+}
+
